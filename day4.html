@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>the love test app</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+
+		body{
+			background: black;
+		}
+		form{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: white;
+			padding: 50px 20px;
+			border-radius: 10px;
+			border: 2px solid white;
+			background: goldenrod;
+			box-shadow: 3px 4px red, 4px 4px darkblue;
+
+		}
+input{
+	width: 100%;
+	padding: 6px;
+}
+p{
+	color: white;
+
+}
+input[type='submit']{
+	color: white;
+	text-align: center;
+	text-transform: capitalize;
+	background: red;
+}
+
+
+
+
+	</style>
+</head>
+<body>
+	<form onsubmit="return check()">
+		<label for="yname">Your Name</label>
+		<input type="text" name="yname" id="yname">
+		<br><br>
+		<label  for="cname">Couple Name</label>
+		<input type="text" name="cname" id="cname">
+		<br><br>
+		<p id="result"></p>
+		<br><br>
+		<input type="submit" name="submit">
+
+	</form>
+
+</body>
+</html>
+<script type="text/javascript">
+	
+
+
+function check()
+{
+	let yname = document.getElementById("yname").value;
+	let cname = document.getElementById("cname").value;
+	var result = document.getElementById("result");
+let random = Math.ceil(Math.random()*200);
+result.innerHTML= "congratulation🥰🥰 "+ yname + " you love your partner " + cname + " " + random + "%";
+return false;
+}
+
+
+</script>
